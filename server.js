@@ -4,7 +4,8 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const shortid = require('shortid');
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MLAB_URI || 'mongodb://localhost/exercise-track' )
+const MLAB_URI;//upload your own MLAB_URI here for testing
+mongoose.connect(MLAB_URI || 'mongodb://localhost/exercise-track' )
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
